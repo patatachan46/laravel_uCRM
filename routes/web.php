@@ -16,6 +16,12 @@ use Inertia\Inertia;
 |
 */
 
+// テストページ表示用ルーティング
+Route::get('/inertia-test', function () {
+  return Inertia::render('InertiaTest');
+});
+
+// ウェルカムページ表示用ルーティング
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
