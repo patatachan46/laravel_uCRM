@@ -16,6 +16,7 @@ return [
     |
     */
 
+    // アプリケーション名_.envのAPP_NAME=uCRMが優先される。APP_NAMEがない場合はLaravelが適用される。
     'name' => env('APP_NAME', 'Laravel'),
 
     /*

@@ -2,20 +2,19 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\InertiaTestController;
+use App\Http\Controllers\ItemController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+// アイテムページ_Laravel_Breeze経由
+Route::resource('items', ItemController::class)->middleware(['auth', 'verified']);
+
+
+
+
+// 動作確認用ルーティング↓
+// ------------------------------------------------------------
 
 // テストページ表示用ダイレクトルーティング
 Route::get('/inertia-test', function () {
