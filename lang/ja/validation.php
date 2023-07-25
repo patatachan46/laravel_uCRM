@@ -176,6 +176,7 @@ return [
 
     'attributes' => [
         'address' => '住所',
+        'address' => '住所',
         'age' => '歳',
         'amount' => '額',
         'area' => 'エリア',

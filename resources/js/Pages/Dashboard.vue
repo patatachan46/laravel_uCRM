@@ -4,11 +4,13 @@ import { Head } from '@inertiajs/vue3';
 </script>
 
 <template>
-    <Head title="イベント商品予約画面" />
+    <Head title="Dashboard" />
 
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">イベント商品予約</h2>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+              Dashboard
+            </h2>
         </template>
 
         <div class="py-12">

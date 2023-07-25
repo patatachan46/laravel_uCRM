@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\InertiaTestController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -16,10 +17,23 @@ use Inertia\Inertia;
 |
 */
 
-// テストページ表示用ルーティング
+// テストページ表示用ダイレクトルーティング
 Route::get('/inertia-test', function () {
   return Inertia::render('InertiaTest');
 });
+
+// テストページ表示用ダイレクトルーティング
+Route::get('/component-test', function () {
+  return Inertia::render('ComponentTest');
+});
+
+// テストページ 表示用ルーティング
+Route::get('/inertia/index', [InertiaTestController::class, 'index'])->name('inertia.index');
+// テストページ ポストメソッド用ルーティング
+Route::post('/inertia', [InertiaTestController::class, 'store'])->name('inertia.store');
+Route::get('/inertia/create', [InertiaTestController::class, 'create'])->name('inertia.create');
+Route::get('/inertia/show/{id}', [InertiaTestController::class, 'show'])->name('inertia.show');
+Route::delete('/inertia/{id}', [InertiaTestController::class, 'delete'])->name('inertia.delete');
 
 // ウェルカムページ表示用ルーティング
 Route::get('/', function () {
