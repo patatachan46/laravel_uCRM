@@ -1,6 +1,7 @@
 <script setup>
   import { reactive } from 'vue'
   import { Inertia } from '@inertiajs/inertia'
+  import BreezeValidationErrors from '@/Components/ValidationErrors.vue'
 
   // Vue側のエラー文表示機能
   defineProps({
@@ -20,6 +21,7 @@
 
 <template>
   <!-- ↓Form送信はJavaScript側で実施。submitボタンが押下された時に、@submit.preventで全てのページ読み込みを防ぎ処理速度を向上させる。 -->
+  <BreezeValidationErrors :errors="errors" />
   <form @submit.prevent="submitFunction">
     <input type="text" name="Title" v-model="form.title">
     <!-- エラー文表示 -->

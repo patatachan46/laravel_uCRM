@@ -12,14 +12,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // UserSeederの呼び出し
+        // UserSeederとItemSeederの呼び出し
         $this->call([
           UserSeeder::class,
+          ItemSeeder::class
         ]);
 
-
-
-        
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

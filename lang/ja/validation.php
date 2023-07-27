@@ -174,8 +174,9 @@ return [
     |
     */
 
+    // バリデーションの単語追加
     'attributes' => [
-        'address' => '住所',
+        'memo' => '商品詳細',
         'address' => '住所',
         'age' => '歳',
         'amount' => '額',
