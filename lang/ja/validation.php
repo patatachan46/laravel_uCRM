@@ -176,7 +176,7 @@ return [
 
     // バリデーションの単語追加
     'attributes' => [
-        'memo' => '商品詳細',
+        'memo' => 'メモ',
         'address' => '住所',
         'age' => '歳',
         'amount' => '額',
@@ -249,6 +249,9 @@ return [
         'updated_at' => '更新日',
         'username' => 'ユーザー名',
         'year' => '年',
+        'tel' => '電話番号',
+        'postcode' => '郵便番号',
+        'kana' => 'カナ',
     ],
 
 ];

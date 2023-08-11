@@ -3,13 +3,15 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\InertiaTestController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\CustomerController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-// アイテムページ_Laravel_Breeze経由
+// 商品ページ_Laravel_Breeze経由
 Route::resource('items', ItemController::class)->middleware(['auth', 'verified']);
-
+// 顧客ページ_Laravel_Breeze経由
+Route::resource('customers', CustomerController::class)->middleware(['auth', 'verified']);
 
 
 
